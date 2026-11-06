@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>はじめてのToDoアプリ</title>
+  <!-- 見た目を定義したCSSファイルを読み込む -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>📝 My ToDo</h1>
+      <p>今日やることを整理しましょう</p>
+    </header>
+
+    <!-- フォームを送信するとJavaScriptがタスクを追加する -->
+    <form id="todo-form" class="todo-form">
+      <label for="task-input" class="sr-only">新しいタスク</label>
+      <input id="task-input" type="text" placeholder="例：JavaScriptを勉強する" maxlength="100" required>
+      <button type="submit">追加</button>
+    </form>
+
+    <p id="task-count" class="task-count" aria-live="polite">タスクは0件です</p>
+    <!-- ここにJavaScriptでタスクを並べる -->
+    <ul id="task-list" class="task-list"></ul>
+    <p id="empty-message" class="empty-message">まだタスクがありません。最初のタスクを追加しましょう！</p>
+  </main>
+  <!-- 画面の部品を読み込んだあとでJavaScriptを実行する -->
+  <script src="script.js"></script>
+</body>
+</html>
